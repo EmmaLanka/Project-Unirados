@@ -43,3 +43,17 @@ function smoothScroll (scrollTo, offset) {
   }
   step()
 }
+
+$('.contacts-form__row button').on('click', function (e) {
+  e.preventDefault();
+  $('.contact-modal__overlay').show();
+  $('.contact-modal').show();
+  $('.body').css('height','100%');
+  $('.body').css('overflow','hidden');
+});
+$('.js-close-modal').on('click', function () {
+  $('.contact-modal__overlay').hide();
+  $('.contact-modal').hide();
+  $('.body').css('height','');
+  $('.body').css('overflow','');
+});
