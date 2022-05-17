@@ -611,7 +611,57 @@ textarea {
     }
 
 }
-
+.contact-modal__overlay {
+    display: none;
+    top: 0;
+    position: fixed;
+    background: #00000022;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1040;
+}
+.contact-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1050;
+}
+.contact-modal__content {
+    width: 540px;
+    background: #ffffff;
+    padding: 40px 60px 100px;
+    box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+}
+@media (max-width: 767px) {
+    .contact-modal {
+        width: 100%;
+        left: unset;
+        transform: translate3d(0, -50%, 0);
+    }
+    .contact-modal__content {
+        width: 100%;
+        padding: 40px 0;
+    }
+}
+.modal-contact__title {
+    text-align: center;
+    font-size: 32px;
+}
+.modal-contact__text {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+.modal-contact__cross {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 20px;
+    transform: rotate(45deg);
+    font-size: 50px;
+}
 /*----Footer-----*/
 
 footer {
